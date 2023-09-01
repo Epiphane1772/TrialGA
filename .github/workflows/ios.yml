@@ -20,7 +20,7 @@ jobs:
       - name: Install Simulator
         run: |
           sudo xcrun simctl list runtimes
-          sudo xcrun simctl create 'iPhone 11' com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-15-2
+          sudo xcrun simctl create 'iPhone 14 Pro' com.apple.CoreSimulator.SimDeviceType.iPhone-14-Pro com.apple.CoreSimulator.SimRuntime.iOS-16-2
 
       - name: Build and Test
-        run: xcodebuild build-for-testing -scheme TrialGA -project ./TrialGA.xcodeproj -destination "platform=iOS Simulator,name=iPhone 11"
+        run: xcodebuild build-for-testing -scheme TrialGA -project ./TrialGA.xcodeproj -destination "platform=iOS Simulator,name=iPhone 14 Pro"
